@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Passlayout">
+
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <!-- This is the main Linear Layout -->
+    <LinearLayout
+      android:id="@+id/main_linear_view"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="#708090"
+      android:orientation="vertical"
+      android:padding="5dp">
+
+
+
+        <!-- This is the Street Linear Layout -->
+      <LinearLayout
+          android:id="@+id/street_linear"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@color/white"
+          android:padding="5dp">
+
+          <LinearLayout
+              android:id="@+id/image_linear"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:paddingLeft="20dp">
+              <ImageView
+                  android:id="@+id/car_image"
+                  android:layout_width="60dp"
+                  android:layout_height="60dp"
+                  android:src="@drawable/car">
+
+              </ImageView>
+          </LinearLayout>
+              <LinearLayout
+                  android:id="@+id/text_linear_of_street"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:paddingLeft="20dp"
+                  android:paddingTop="10dp">
+
+
+                  <TextView
+                      android:id="@+id/street_id"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Street 1"
+                      android:textSize="30dp"
+                      android:textStyle="bold"
+                      android:textColor="@color/black">
+
+                  </TextView>
+
+              </LinearLayout>
+      </LinearLayout>
+        <!-- Closing of Street layout -->
+
+
+        <!-- This is the pass Layout -->
+      <LinearLayout
+          android:id="@+id/pass_type_Linear"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/street_linear"
+          android:background="@color/white"
+          android:layout_marginTop="10dp"
+          android:padding="5dp">
+
+          <LinearLayout
+              android:id="@+id/passtypelinear"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:paddingLeft="20dp">
+
+              <TextView
+                  android:id="@+id/passtype"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Pass Type"
+                  android:textSize="20dp"
+                  android:textColor="@color/black"
+                  android:textStyle="bold"/>
+
+          </LinearLayout>
+
+              <LinearLayout
+                  android:id="@+id/exempted_linear"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_below="@+id/passtype"
+                  android:layout_marginTop="60dp"
+                  android:padding="5dp"
+                  android:layout_marginLeft="-100dp">
+
+                  <TextView
+                      android:id="@+id/exempted"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Exempted"
+                      android:textSize="30dp">
+
+                  </TextView>
+
+
+
+              </LinearLayout>
+      </LinearLayout>
+
+        <!-- This is the pass description Layout -->
+        <LinearLayout
+            android:id="@+id/pass_description_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pass_type_Linear"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:layout_marginTop="10dp"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:id="@+id/passdescriptionsublinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp">
+
+                <TextView
+                    android:id="@+id/passdescripation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pass Descripation"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"> </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Dail_Pass_linear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/passtype"
+                android:layout_marginTop="60dp"
+                android:padding="5dp"
+                android:layout_marginLeft="0dp">
+
+                <TextView
+                    android:id="@+id/dailypass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Daily Pass (Exempted)"
+                    android:textSize="30dp">
+
+                </TextView>
+
+
+
+            </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+        <!-- This is the Pass validity Layout -->
+    <LinearLayout
+        android:id="@+id/pass_validity_main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pass_description_linear"
+        android:background="@color/white"
+        android:layout_marginTop="10dp"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:id="@+id/pass_validity_sub_linear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pass Validity :"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:textStyle="bold">
+
+            </TextView>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/day_sub_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Day 1">
+            </TextView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+        <!-- This is the Vehile No Layout -->
+
+        <LinearLayout
+            android:id="@+id/vehicle_no_main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pass_validity_main_layout"
+            android:background="@color/white"
+            android:layout_marginTop="10dp"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:id="@+id/vehicle_no_sub_linear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vehicle No :"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold">
+
+                </TextView>
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/Vehicle_sub_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Vehicla No :"
+                    android:background="@android:color/transparent" >
+
+                </EditText>
+
+
+                 </LinearLayout>
+        </LinearLayout>
+
+        <!-- This is the Pass from Date Layout -->
+
+        <LinearLayout
+            android:id="@+id/pass_from_date_main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/vehicle_no_main_layout"
+            android:background="@color/white"
+            android:layout_marginTop="10dp"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:id="@+id/pass_from_date_sub_linear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pass From Date :"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold">
+
+                </TextView>
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/date_sub_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+              <android.widget.TextClock
+                  android:id="@+id/date"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:format12Hour="dd.MM.yyyy"
+                  android:format24Hour="@null"
+                  android:textSize="50dp">
+
+
+              </android.widget.TextClock>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>
+
+    <!-- This is the Bottom Layout -->
+    <LinearLayout
+        android:id="@+id/bottom_main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/white"
+        android:layout_marginTop="10dp"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:id="@+id/rupees_linear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="500 Rs"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:textStyle="bold">
+
+            </TextView>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/pay_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:onClick="Action">
+            <TextView
+                android:id="@+id/paynow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pay Now"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="20dp">
+
+            </TextView>
+
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
